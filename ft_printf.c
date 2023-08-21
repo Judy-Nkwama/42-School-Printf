@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junkwama <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/10 12:58:11 by junkwama          #+#    #+#             */
-/*   Updated: 2023/05/10 13:10:49 by junkwama         ###   ########.fr       */
+/*   Created: 2023/08/21 17:22:27 by junkwama          #+#    #+#             */
+/*   Updated: 2023/08/21 18:05:14 by junkwama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "ft_printf.h"
 
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*ptr;
-	int		bytes;
-
-	if (count + size < count || count + size < size)
-		return (NULL);
-	bytes = count * size;
-	ptr = malloc(bytes);
-	if (!ptr)
-		return (NULL);
-	while (bytes--)
-		((char *)ptr)[bytes] = 0;
-	return (ptr);
+int ft_printf(const char *str, ...){
+	return (0);
 }
+

@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: junkwama <junkwama@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: junkwama <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 21:40:19 by junkwama          #+#    #+#             */
-/*   Updated: 2023/05/08 22:40:08 by junkwama         ###   ########.fr       */
+/*   Created: 2023/08/21 17:16:54 by junkwama          #+#    #+#             */
+/*   Updated: 2023/08/21 17:25:01 by junkwama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_isprint(int c)
-{
-	if ((c >= ' ' && c <= '~'))
-		return (1);
-	return (0);
+void	ft_putstr_fd(char *s, int fd)
+{	
+	int	i;
+
+	i = 0;
+	if (s)
+	{
+		while (s[i])
+		{
+			ft_putchar_fd(s[i], fd);
+			i++;
+		}
+	}
 }
