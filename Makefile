@@ -6,12 +6,12 @@
 #    By: junkwama <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/21 17:28:24 by junkwama          #+#    #+#              #
-#    Updated: 2023/08/21 17:59:36 by junkwama         ###   ########.fr        #
+#    Updated: 2023/08/22 09:01:09 by junkwama         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SRCS = ft_printf.c ft_putchar_fd.c  ft_putnbr_fd.c  ft_putstr_fd.c
+SRCS = ft_putptr_fd.c main.c ft_printf.c ft_putchar_fd.c  ft_putnbr_fd.c  ft_putstr_fd.c
 FLAGS = -Wall -Werror -Wextra
 
 OBJS = $(SRCS:.c=.o)
