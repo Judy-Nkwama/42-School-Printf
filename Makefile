@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: junkwama <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: junkwama <junkwama@student.42roma.it>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/21 17:28:24 by junkwama          #+#    #+#              #
-#    Updated: 2023/08/22 09:01:09 by junkwama         ###   ########.fr        #
+#    Updated: 2023/08/27 01:32:33 by junkwama         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SRCS = ft_putptr_fd.c main.c ft_printf.c ft_putchar_fd.c  ft_putnbr_fd.c  ft_putstr_fd.c
+SRCS = putptr.c putchar.c  putnbr.c  putstr.c main.c ft_printf.c
 FLAGS = -Wall -Werror -Wextra
 
 OBJS = $(SRCS:.c=.o)
