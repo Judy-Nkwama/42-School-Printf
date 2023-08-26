@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   putptr.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: junkwama <junkwama@student.42roma.it>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/27 01:46:50 by junkwama          #+#    #+#             */
+/*   Updated: 2023/08/27 01:49:27 by junkwama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 void	print_hex(unsigned long long int n, char *hex_chars, int *i)
@@ -10,7 +22,7 @@ void	print_hex(unsigned long long int n, char *hex_chars, int *i)
 
 int	putptr(void *ptr)
 {
-	char                        *hex_chrs;
+    char                        *hex_chrs;
 	unsigned long long int		lliptr;
 	int							i;
 
