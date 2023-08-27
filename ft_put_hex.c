@@ -6,7 +6,7 @@
 /*   By: junkwama <junkwama@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:50:30 by junkwama          #+#    #+#             */
-/*   Updated: 2023/08/27 13:34:57 by junkwama         ###   ########.fr       */
+/*   Updated: 2023/08/27 14:06:51 by junkwama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_put_hex(unsigned int nbr, int upper)
 {
-	int     printed;
-	char    *hex_chrs;
+	int		printed;
+	char	*hex_chrs;
 
 	printed = 0;
 	if (upper == 1)
