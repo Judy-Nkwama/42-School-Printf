@@ -2,7 +2,9 @@
 # include "ft_printf.h"
 
 int main(){
-	unsigned int a = 1545;
-	printf("printf: %u\n", a);
-	ft_printf("ft_printf: %u\n", a);
+	unsigned int a = 30;
+	int l = printf("prt1: %x\n", a);
+	int ftl = ft_printf("prt2: %x\n", a);
+	printf("len: %d\n", l);
+	printf("ft_len: %d\n", ftl);
 }

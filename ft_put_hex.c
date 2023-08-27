@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*   ft_put_hex.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junkwama <junkwama@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 01:46:50 by junkwama          #+#    #+#             */
-/*   Updated: 2023/08/27 12:00:37 by junkwama         ###   ########.fr       */
+/*   Created: 2023/08/27 11:50:30 by junkwama          #+#    #+#             */
+/*   Updated: 2023/08/27 12:24:50 by junkwama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putptr(void *ptr)
+int ft_put_hex(unsigned int nbr, int upper)
 {
-	char						*hex_chrs;
-	unsigned long long int		lliptr;
-	int							i;
+    int     printed;
+    char    *hex_chrs;
 
-	i = 0;
-	lliptr = (unsigned long long int)ptr;
-	hex_chrs = "0123456789abcdef";
-	write(1, "0x", 2);
-	ft_print_hex(lliptr, hex_chrs, &i);
-	return (i + 2);
+    printed = 0;
+    if (upper == 1)
+		hex_chrs = "0123456789ABCDEF";
+	else
+		hex_chrs = "0123456789abcdef";
+	ft_print_hex((unsigned long long int)nbr, hex_chrs, &printed);
+	return (printed);
 }
