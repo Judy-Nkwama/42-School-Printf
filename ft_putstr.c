@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putptr.c                                           :+:      :+:    :+:   */
+/*   putstr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junkwama <junkwama@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 01:46:50 by junkwama          #+#    #+#             */
-/*   Updated: 2023/08/27 01:49:27 by junkwama         ###   ########.fr       */
+/*   Created: 2023/08/27 01:47:31 by junkwama          #+#    #+#             */
+/*   Updated: 2023/08/27 04:19:44 by junkwama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	print_hex(unsigned long long int n, char *hex_chars, int *i)
+int	ft_putstr(char *s)
 {
-	if (n >= 16)
-        print_hex(n / 16, hex_chars, i);
-    putchr(hex_chars[n % 16]);
-    *i = *i + 1;
-}
-
-int	putptr(void *ptr)
-{
-    char                        *hex_chrs;
-	unsigned long long int		lliptr;
-	int							i;
+	int	i;
 
 	i = 0;
-	lliptr = (unsigned long long int)ptr;
-	hex_chrs = "0123456789abcdef";
-	write(1, "0x", 2);
-	putptr(lliptr, hex_chrs, &i);
-	return (i + 2);
+	if (s)
+	{
+		while (s[i])
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
+	}
+	return (i);
 }

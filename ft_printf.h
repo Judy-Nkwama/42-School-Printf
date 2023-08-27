@@ -6,7 +6,7 @@
 /*   By: junkwama <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 17:05:47 by junkwama          #+#    #+#             */
-/*   Updated: 2023/08/27 01:27:12 by junkwama         ###   ########.fr       */
+/*   Updated: 2023/08/27 04:17:28 by junkwama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 # include <unistd.h>
 
 int	ft_printf(const char *str, ...);
-int	putchar(char c);
-int	putnbr(int n);
-int	putstr(char *s);
-int	putptr(void *ptr);
+int	ft_putchar(char c);
+int	ft_putnbr(int n);
+int	ft_putstr(char *s);
+int	ft_putptr(void *ptr, int upper);
 
 #endif

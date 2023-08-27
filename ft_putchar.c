@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putstr.c                                           :+:      :+:    :+:   */
+/*   putchar.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: junkwama <junkwama@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: junkwama <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 01:47:31 by junkwama          #+#    #+#             */
-/*   Updated: 2023/08/27 01:48:26 by junkwama         ###   ########.fr       */
+/*   Created: 2023/08/27 01:47:54 by junkwama          #+#    #+#             */
+/*   Updated: 2023/08/27 04:19:20 by junkwama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	putstr(char *s)
+int	ft_putchar(char c)
 {
-	int	i;
-
-	i = 0;
-	if (s)
-	{
-		while (s[i])
-		{
-			putchar(s[i]);
-			i++;
-		}
-	}
-	return (i);
+	write(1, &c, 1);
+	return (1);
 }
