@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: junkwama <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: junkwama <junkwama@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 17:22:27 by junkwama          #+#    #+#             */
-/*   Updated: 2023/08/27 04:49:48 by junkwama         ###   ########.fr       */
+/*   Updated: 2023/08/27 11:26:11 by junkwama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
+#include "ft_printf.h"
 
-int format_manager(char f, va_list arg)
+int	format_manager(char f, va_list arg)
 {
 	int	l;
 
@@ -20,17 +20,19 @@ int format_manager(char f, va_list arg)
 	if (f == 'c')
 		l = l + ft_putchar(va_arg(arg, int));
 	else if (f == '%')
-        l = l + ft_putchar('%');
+		l = l + ft_putchar('%');
 	else if (f == 's')
-        l = l + ft_putstr(va_arg(arg, char*));
-	else if (f == 'd')
-        l = l + ft_putnbr(va_arg(arg, int));
+		l = l + ft_putstr(va_arg(arg, char *));
+	else if (f == 'd' || f == 'i')
+		l = l + ft_putnbr(va_arg(arg, int));
+	else if (f == 'u')
+		l = l + ft_put_unsigned_nbr(va_arg(arg, unsigned int));
 	else if (f == 'p')
-        l = l + ft_putptr(va_arg(arg, void*), 0);
+		l = l + ft_putptr(va_arg(arg, void *), 0);
 	return (l);
 }
 
-int ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	arg;
 	int		i;
@@ -53,4 +55,3 @@ int ft_printf(const char *str, ...)
 	va_end(arg);
 	return (len);
 }
-

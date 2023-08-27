@@ -2,6 +2,7 @@
 # include "ft_printf.h"
 
 int main(){
-	int a = 12;
-	printf("%p", &a);	
+	unsigned int a = 1545;
+	printf("printf: %u\n", a);
+	ft_printf("ft_printf: %u\n", a);
 }

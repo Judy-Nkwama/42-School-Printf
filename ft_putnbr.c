@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putnbr.c                                           :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: junkwama <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: junkwama <junkwama@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 01:47:15 by junkwama          #+#    #+#             */
-/*   Updated: 2023/08/27 04:20:28 by junkwama         ###   ########.fr       */
+/*   Updated: 2023/08/27 11:19:32 by junkwama         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_putnbr(int n)
 		nb = n;
 	if (nb >= 10)
 		prted_n = prted_n + ft_putnbr(nb / 10);
-	ft_putchar(nb % 10 + 48);
+	ft_putchar((nb % 10) + 48);
 	prted_n++;
 	return (prted_n);
 }
